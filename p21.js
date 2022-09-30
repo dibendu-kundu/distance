@@ -1,12 +1,11 @@
-navigator.geolocation.getCurrentPosition(successfunc, errorfunc);
-function successfunc(position) {
-    let { lati, longi } = position.coords;
-}
-function errorfunc() {
-    alert("error");
-}
-
 function myfunc() {
+    navigator.geolocation.getCurrentPosition(successfunc, errorfunc);
+    function successfunc(position) {
+        let { lati, longi } = position.coords;
+    }
+    function errorfunc() {
+        alert("error");
+    }
     let lat = document.querySelector(".lat");
     let lon = document.querySelector(".lon");
     let distance = document.querySelector(".dist");
@@ -63,6 +62,4 @@ function myfunc() {
         }
 
     }, 1000);
-
 }
-
